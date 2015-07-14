@@ -6,3 +6,4 @@ gen/
 proguard/
 *.classpath
 /doExt_do_CheckBox/libs/docore.jar
+/doExt_do_CheckBox/do_CheckBox.zip
