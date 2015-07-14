@@ -106,12 +106,13 @@ public class do_CheckBox_View extends CheckBox implements DoIUIModuleView, do_Ch
 	
 	@Override
 	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-		doCheckBoxView_changed();
+		doCheckBoxView_changed(isChecked);
 	}
 
 	// =========================================================================
-	private void doCheckBoxView_changed() {
+	private void doCheckBoxView_changed(boolean isChecked) {
 		DoInvokeResult _invokeResult = new DoInvokeResult(this.model.getUniqueKey());
+		_invokeResult.setResultBoolean(isChecked);
 		this.model.getEventCenter().fireEvent("changed", _invokeResult);
 	}
 
