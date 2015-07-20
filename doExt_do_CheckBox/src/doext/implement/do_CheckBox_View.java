@@ -103,7 +103,7 @@ public class do_CheckBox_View extends CheckBox implements DoIUIModuleView, do_Ch
 		// ...do something
 		return false;
 	}
-	
+
 	@Override
 	public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 		doCheckBoxView_changed(isChecked);
@@ -111,6 +111,7 @@ public class do_CheckBox_View extends CheckBox implements DoIUIModuleView, do_Ch
 
 	// =========================================================================
 	private void doCheckBoxView_changed(boolean isChecked) {
+		this.model.setPropertyValue("checked", isChecked + "");
 		DoInvokeResult _invokeResult = new DoInvokeResult(this.model.getUniqueKey());
 		_invokeResult.setResultBoolean(isChecked);
 		this.model.getEventCenter().fireEvent("changed", _invokeResult);
