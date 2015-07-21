@@ -114,7 +114,7 @@ public class do_CheckBox_View extends CheckBox implements DoIUIModuleView, do_Ch
 		this.model.setPropertyValue("checked", isChecked + "");
 		DoInvokeResult _invokeResult = new DoInvokeResult(this.model.getUniqueKey());
 		_invokeResult.setResultBoolean(isChecked);
-		this.model.getEventCenter().fireEvent("changed", _invokeResult);
+		this.model.getEventCenter().fireEvent("checkChanged", _invokeResult);
 	}
 
 	/**
