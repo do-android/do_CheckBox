@@ -5,6 +5,7 @@ import java.util.Map;
 import org.json.JSONObject;
 
 import android.content.Context;
+import android.util.TypedValue;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
@@ -41,6 +42,7 @@ public class do_CheckBox_View extends CheckBox implements DoIUIModuleView, do_Ch
 	@Override
 	public void loadView(DoUIModule _doUIModule) throws Exception {
 		this.model = (do_CheckBox_MAbstract) _doUIModule;
+		this.setTextSize(TypedValue.COMPLEX_UNIT_PX, DoUIModuleHelper.getDeviceFontSize(_doUIModule, "17"));
 		this.setOnCheckedChangeListener(this);
 	}
 
